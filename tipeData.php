@@ -6,7 +6,5 @@ $jomblo = TRUE;
 $goldarah = array('A', 'B', 'AB', 'O');
 $kosong;
 
-print_r($message)
+var_dump($message)
     ?>
-
-<!-- var_dump() menampilkan nilai variabel serta tipe datanya -->
