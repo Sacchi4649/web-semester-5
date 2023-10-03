@@ -1,6 +1,6 @@
 <?php
 
-$nilaiAngka = 39;
+$nilaiAngka = 38;
 
 if ($nilaiAngka >= 80) {
     echo "Nilai huruf A";
