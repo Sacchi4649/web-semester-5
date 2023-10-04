@@ -1,6 +1,6 @@
 <?php
 $x = true;
-$y = true;
+$y = false;
 ?>
 
 <table class="table table-bordered table-striped">

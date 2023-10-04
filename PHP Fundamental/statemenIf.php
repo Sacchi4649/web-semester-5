@@ -8,6 +8,3 @@ if ($nama == "Jobs") {
 }
 echo $message;
 ?>
-
-<!-- jika $ nama diisi dengan nama kita, maka output message adalah "Selamat datang $nama"
-sedangkan jika $nama diisi dengan Jobs maka outputnya adalah "Hi, it's an honor to greet you" -->
