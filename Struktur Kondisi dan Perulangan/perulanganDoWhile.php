@@ -5,5 +5,5 @@ $i = 0;
 do {
     echo $data[$i] . "\n";
     $i++;
-} while ($i < $count);
+} while ($i < $length);
 ?>

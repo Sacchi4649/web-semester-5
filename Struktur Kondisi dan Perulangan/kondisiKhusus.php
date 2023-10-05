@@ -1,6 +1,8 @@
 <?php
-$tahun = date('Y');
-echo $tahun;
-$kabisat = ($tahun % 4 == 0) ? "Kabisat" : "Bukan Kabisat";
-echo "Tahun " . $tahun . " " . $kabisat;
+date_default_timezone_set('Asia/Jakarta');
+$cekKabisat = date('Y');
+$timestamp = date('d-M-Y h:i:s');
+echo $timestamp . "\n";
+$kabisat = ($cekKabisat % 4 == 0) ? "Kabisat" : "Bukan Kabisat";
+echo "Tahun " . $cekKabisat . " " . $kabisat;
 ?>
