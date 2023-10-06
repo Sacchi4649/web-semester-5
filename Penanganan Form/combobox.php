@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Film Kartun Favorit - Inputan Combobox</title>
+    <title>Film Kartun Favorit-Inputan Combobox</title>
 </head>
 
 <body>
