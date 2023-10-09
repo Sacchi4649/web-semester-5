@@ -9,3 +9,4 @@ function hitung($a, $b)
 // untuk dapat menggunakan fungsi yang telah dibuat,
 // perlu pemanggilan nama fungsinya.
 echo "Hasil = " . hitung(2, 4);
+?>
