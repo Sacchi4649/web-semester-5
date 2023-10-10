@@ -7,12 +7,6 @@ $mahasiswa = array(
     array("Marsel", "Teknik Informatika", "Laki-laki", 24)
 );
 
-// foreach ($mahasiswa as list($nama, $jurusan, $jenisKelamin, $usia)) {
-//     echo "<tr>";
-//     echo "$nama, $jurusan, $jenisKelamin, $usia  <br>";
-
-// }
-
 echo "<table border='1'>";
 echo "<tr>";
 foreach ($mahasiswa[0] as $key => $value) {
