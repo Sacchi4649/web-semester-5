@@ -1,16 +1,14 @@
 <?php
-
-$mahasiswa = ["Lindung Siswanto", "Laki-laki", "11/06/1984", "A", 3.51, "Pemrograman Web"];
-
-function printArrayWithList($array)
+function hitungLuas($panjang, $lebar, $tinggi)
 {
-    list($nama, $jeniskelamin, $tanggallahir, $poin, $IP, $spesialisasi) = $array;
-    echo $nama . "<br>";
-    echo $jeniskelamin . "<br>";
-    echo $tanggallahir . "<br>";
-    echo $poin . "<br>";
-    echo $IP . "<br>";
-    echo $spesialisasi . "<br>";
+    if (isset($tinggi) && $tinggi > 0) {
+        echo "Luas selimut balok: " . $panjang * $lebar * $tinggi . "\n";
+        echo "Luas selimut tabung: " . 2 * 22 / 7 * $panjang / 2 * ($panjang / 2 + $tinggi);
+    } else {
+        echo "Luas persegi: " . $panjang * $lebar . "\n";
+        echo "Luas lingkaran: " . 1 / 4 * 22 / 7 * $panjang ** 2;
+    }
 }
-printArrayWithList($mahasiswa);
-?>
+
+hitungLuas(4, 5, 0)
+    ?>

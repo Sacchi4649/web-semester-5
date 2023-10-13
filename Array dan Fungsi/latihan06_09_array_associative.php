@@ -15,7 +15,7 @@ for ($r = 0; $r < count($nilai); $r++) {
         echo $key . " = " . $value . " ";
     }
     echo "</li>";
-    echo "<br><br";
+    echo "<br><br>";
 }
 echo "</ul>";
 ?>

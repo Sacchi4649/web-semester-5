@@ -5,9 +5,9 @@ $nilai = array(
     array("Nama" => "Sani", "Nomor Induk" => "123", "IPA" => 90, "IPS" => 65, "BAHASA" => 83),
     array("Nama" => "Jani", "Nomor Induk" => "456", "IPA" => 90, "IPS" => 78, "BAHASA" => 87),
     array("Nama" => "Dani", "Nomor Induk" => "789", "IPA" => 78, "IPS" => 90, "BAHASA" => 78),
-    array("Nama" => "Fani", "Nomor Induk" => "101", "IPA" => 88, "IPS" => 76, "BAHASA" => 92),
-    array("Nama" => "Bani", "Nomor Induk" => "202", "IPA" => 85, "IPS" => 82, "BAHASA" => 79),
-    array("Nama" => "Doni", "Nomor Induk" => "303", "IPA" => 91, "IPS" => 88, "BAHASA" => 85)
+    array("Nama" => "Fani", "Nomor Induk" => "101", "IPA" => 82, "IPS" => 79, "BAHASA" => 97),
+    array("Nama" => "Bani", "Nomor Induk" => "202", "IPA" => 89, "IPS" => 87, "BAHASA" => 74),
+    array("Nama" => "Doni", "Nomor Induk" => "303", "IPA" => 94, "IPS" => 92, "BAHASA" => 86)
 );
 
 // Menampilkan array dalam bentuk tabel

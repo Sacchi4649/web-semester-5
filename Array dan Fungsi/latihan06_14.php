@@ -1,12 +1,11 @@
 <?php
-
-$mahasiswa = ["Lindung Siswanto", "Laki-laki", "11/06/1984", "A", 3.51, "Pemrograman Web"];
-function printArray($array)
+function greet($nama)
 {
-    $count = count($array);
-    for ($x = 0; $x < $count; $x++) {
-        echo $array[$x] . "<br>";
+    $message = "Selamat datang $nama!";
+    if ($nama == "Jobs") {
+        $message = "Hi, it's an honor to greet you, $nama!";
     }
+    echo $message;
 }
-printArray($mahasiswa);
+greet("Sany");
 ?>
