@@ -9,10 +9,10 @@ echo '<br>';
 echo 'Syafi\'i berkata: "ini hari jum\'at"';
 echo '<br>';
 // Outputs: Menghapus C:\*.*?
-echo 'Menghapus C:\\*.*?';
+echo 'Menghapus C:\\*.*? tes';
 echo '<br>';
 // Outputs: Menghapus C:\*.*?
-echo 'Menghapus C:\\*.*?';
+echo 'Menghapus C:\*.*';
 echo '<br>';
 // Outputs: Ini bukan baris baru: \n bukan baris baru
 echo 'Ini bukan baris baru: \n bukan baris baru';
