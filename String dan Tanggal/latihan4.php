@@ -1,5 +1,5 @@
 <?php
-$str = "Pontianak, kalimantan barat";
+$str = "Pontianak, kaliMANTAN barat";
 
 echo "<b>String asli</b> : $str";
 echo "<br>";
