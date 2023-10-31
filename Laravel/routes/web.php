@@ -98,5 +98,14 @@ Route::get('/mahasiswa/{nama}/{umur}/{asal?}', function ($nama, $umur, $asal = "
 })->where('umur', '[0-9]+');
 
 Route::get('/blade', function () {
-    return view('pengenalanBlade.pengulanganWhileBlade');
+    $arr = [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    ];
+    return view('pengenalanBlade.pengulanganForeachBlade', ["arr" => $arr]);
 });
