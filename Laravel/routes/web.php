@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Modul Routing
 Route::get('/', function () {
     return view('welcome');
 });
@@ -34,17 +35,17 @@ Route::get('/mahasiswa/{nama}', function ($nama) {
     return "Menampilkan mahasiswa bernama $nama";
 });
 
-Route::get('/mahasiswa/{nim}/{nama}', function ($nim, $nama) {
-    return "Mahasiswa dengan NIM $nim bernama $nama";
-});
+// Route::get('/mahasiswa/{nim}/{nama}', function ($nim, $nama) {
+//     return "Mahasiswa dengan NIM $nim bernama $nama";
+// });
 
-Route::get('/mahasiswa/{nim}/{nama}', function ($a, $b) {
-    return "Mahasiswa dengan NIM $a bernama $b";
-});
+// Route::get('/mahasiswa/{nim}/{nama}', function ($a, $b) {
+//     return "Mahasiswa dengan NIM $a bernama $b";
+// });
 
-Route::get('/mahasiswa/{nim?}/{nama?}', function ($a = '001', $b = 'linds') {
-    return "Mahasiswa dengan NIM $a bernama $b";
-});
+// Route::get('/mahasiswa/{nim?}/{nama?}', function ($a = '001', $b = 'linds') {
+//     return "Mahasiswa dengan NIM $a bernama $b";
+// });
 
 Route::get('/user/{id}', function ($id) {
     return "Tampilkan user dengan id=$id";
@@ -61,3 +62,37 @@ Route::prefix('/admin')->group(function () {
         echo "<h1>Daftar Karyawan</h1>";
     });
 });
+
+//Modul View
+// Route::get('/mahasiswa', function () {
+//     return view('jurusan.mahasiswa');
+// });
+
+// Route::get('/mahasiswa', function () {
+//     return view('jurusan.mahasiswa', ["mhs1" => "Lukito Edi"]);
+// });
+
+// Route::get('/mahasiswa', function () {
+//     $arrMahasiswa = [
+//         "mhs01" => "Lukito Edi",
+//         "mhs02" => "Rudiyanto",
+//         "mhs03" => "Kusumawardhani",
+//         "mhs04" => "Agung Laksono",
+//     ];
+//     return view('jurusan.mahasiswa', $arrMahasiswa);
+// });
+
+Route::get('/mahasiswa', function () {
+    $arrMahasiswa = [
+        "Lukito Edi",
+        "Rudiyanto",
+        "Kusumawardhani",
+        "Agung Laksono",
+    ];
+    return view('jurusan.mahasiswa')->with('mahasiswa', $arrMahasiswa);
+});
+
+Route::get('/mahasiswa/{nama}/{umur}/{asal?}', function ($nama, $umur, $asal = "Tidak diisi") {
+
+    return view('latihanRouteView', ["nama" => $nama, "umur" => $umur, "asal" => $asal]);
+})->where('umur', '[0-9]+');
