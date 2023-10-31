@@ -96,3 +96,7 @@ Route::get('/mahasiswa/{nama}/{umur}/{asal?}', function ($nama, $umur, $asal = "
 
     return view('latihanRouteView', ["nama" => $nama, "umur" => $umur, "asal" => $asal]);
 })->where('umur', '[0-9]+');
+
+Route::get('/blade', function () {
+    return view('pengenalanBlade.echoBlade');
+});
