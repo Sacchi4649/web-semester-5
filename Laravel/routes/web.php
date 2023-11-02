@@ -27,13 +27,13 @@ Route::get('/latihan', function () {
     echo '<p>Latihan membuat route</p>';
 });
 
-Route::get('/mahasiswa/informatika/linds', function () {
-    echo '<h2 style="text-align: center"><u>Selamat datang Linds</u></h2>';
-});
+// Route::get('/mahasiswa/informatika/linds', function () {
+//     echo '<h2 style="text-align: center"><u>Selamat datang Linds</u></h2>';
+// });
 
-Route::get('/mahasiswa/{nama}', function ($nama) {
-    return "Menampilkan mahasiswa bernama $nama";
-});
+// Route::get('/mahasiswa/{nama}', function ($nama) {
+//     return "Menampilkan mahasiswa bernama $nama";
+// });
 
 // Route::get('/mahasiswa/{nim}/{nama}', function ($nim, $nama) {
 //     return "Mahasiswa dengan NIM $nim bernama $nama";
@@ -63,6 +63,10 @@ Route::prefix('/admin')->group(function () {
     });
 });
 
+Route::get("user/{email}", function ($email) {
+    return "Tampilkan user dengan email=$email";
+})->where('email', '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]+');
+
 //Modul View
 // Route::get('/mahasiswa', function () {
 //     return view('jurusan.mahasiswa');
@@ -82,20 +86,20 @@ Route::prefix('/admin')->group(function () {
 //     return view('jurusan.mahasiswa', $arrMahasiswa);
 // });
 
-Route::get('/mahasiswa', function () {
-    $arrMahasiswa = [
-        "Lukito Edi",
-        "Rudiyanto",
-        "Kusumawardhani",
-        "Agung Laksono",
-    ];
-    return view('jurusan.mahasiswa')->with('mahasiswa', $arrMahasiswa);
-});
+// Route::get('/mahasiswa', function () {
+//     $arrMahasiswa = [
+//         "Lukito Edi",
+//         "Rudiyanto",
+//         "Kusumawardhani",
+//         "Agung Laksono",
+//     ];
+//     return view('jurusan.mahasiswa')->with('mahasiswa', $arrMahasiswa);
+// });
 
-Route::get('/mahasiswa/{nama}/{umur}/{asal?}', function ($nama, $umur, $asal = "Tidak diisi") {
+// Route::get('/mahasiswa/{nama}/{umur}/{asal?}', function ($nama, $umur, $asal = "Tidak diisi") {
 
-    return view('latihanRouteView', ["nama" => $nama, "umur" => $umur, "asal" => $asal]);
-})->where('umur', '[0-9]+');
+//     return view('latihanRouteView', ["nama" => $nama, "umur" => $umur, "asal" => $asal]);
+// })->where('umur', '[0-9]+');
 
 Route::get('/blade', function () {
     $arr = [
@@ -109,3 +113,8 @@ Route::get('/blade', function () {
     ];
     return view('pengenalanBlade.pengulanganForeachBlade', ["arr" => $arr]);
 });
+
+
+//Modul Controller
+Route::get('/', [App\Http\Controllers\MahasiswaController::class, 'index']);
+Route::get('/mahasiswa', [App\Http\Controllers\MahasiswaController::class, 'tampil']);
