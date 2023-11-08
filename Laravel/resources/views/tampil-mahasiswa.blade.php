@@ -1,1 +1,30 @@
-<?php dump($mahasiswas)?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container text-center p-4">
+        <h1 class="mb-3">Data Mahasiswa</h1>
+        <div class="row">
+            <div class="m-auto">
+                <ol>
+                    @forelse ($mahasiswas as $mahasiswa)
+                    <li class="list-group-item">
+                        {{$mahasiswa->nama}} ({{$mahasiswa->nim}}),
+                        Tanggal Lahir: {{$mahasiswa->tanggal_lahir}},
+                        Alamat : {{$mahasiswa->alamat}},
+                        IPK: {{$mahasiswa->ipk}}
+                        deleted_at: {{$mahasiswa->deleted_at}}
+                    </li>
+                    @empty
+                    <div class="alert-alert-dark d-inline-block">Tidak ada data...</div>
+                    @endforelse
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -15,6 +15,7 @@
                     <li class="list-group-item">
                         {{$mahasiswa->nama}} ({{$mahasiswa->nim}}),
                         Tanggal Lahir: {{$mahasiswa->tanggal_lahir}},
+                        Alamat : {{$mahasiswa->alamat}},
                         IPK: {{$mahasiswa->ipk}}
                     </li>
                     @empty
